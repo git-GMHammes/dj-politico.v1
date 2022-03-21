@@ -1,0 +1,32 @@
+{%extends 'temp_global.html'%} # no app extende o dj template da raiz 
+{%block 'titulo'%} Atualizar Político {%endblock%} 
+{%block 'conteudo'%}
+<!-- Page Content -->
+<div class="container">
+  <div class="row">
+    <div class="col-lg-12">
+      <h1 class="mt-5">{{html_2020_candidato.str_nome_votavel}}</h1>
+      <dl>
+        <dt>ID</dt>
+        <dd>{{html_2020_candidato.id}}</dd>
+
+        <dt>Nº Votável</dt>
+        <dd>{{html_2020_candidato.int_numero_votavel}}</dd>
+
+        <dt>Partido Político</dt>
+        <dd>{{html_2020_candidato.str_partido_politico}}</dd>
+
+        <dt>Data criação</dt>
+        <dd>{{html_2020_candidato.str_desc_cargo}}</dd>
+
+        <dt>Qtd de votos</dt>
+        <dd>{{html_2020_candidato.int_qtd_votos}}</dd>
+        
+        <dt>Situação Politica</dt>
+        <dd>{{html_2020_candidato.str_situacao}}</dd>
+        
+      </dl>
+    </div>
+  </div>
+</div>
+{%endblock%}

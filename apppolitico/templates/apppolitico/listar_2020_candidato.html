@@ -1,0 +1,36 @@
+{%extends 'temp_global.html'%} # no app extende o dj template da raiz 
+{%block 'titulo'%} Resultado Político {%endblock%} 
+{%block 'conteudo'%}
+<h1>Resultado Político</h1>
+<h4 class="mt-5">Dados</h4>
+<table class="table">
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>NOME</th>
+      <th>Nº</th>
+      <th>PARTIDO</th>
+      <th>CARGO</th>
+      <th>VOTOS</th>
+      <th>SITUAÇÃO</th>
+    </tr>
+  </thead>
+  <tbody>
+    {%for candidato_2020 in html_2020_candidato%}
+    <tr>
+      <td>
+        <a href="{%url 'atualizar_politico' candidato_2020.id%}"
+          >{{candidato_2020.id}}</a
+        >
+      </td>
+      <td>{{candidato_2020.str_nome_votavel}}</td>
+      <td>{{candidato_2020.int_numero_votavel}}</td>
+      <td>{{candidato_2020.str_partido_politico}}</td>
+      <td>{{candidato_2020.str_desc_cargo}}</td>
+      <td>{{candidato_2020.int_qtd_votos}}</td>
+      <td>{{candidato_2020.str_situacao}}</td>
+    </tr>
+    {%endfor%}
+  </tbody>
+</table>
+{%endblock%}

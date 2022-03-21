@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    {%include 'partial/partial_head.html'%}
+    <title>Template Bootstrap</title>
+  </head>
+  <body>
+    <!-- Navigation -->
+    {%include 'partial/partial_navmenu.html'%}
+    <!-- Page Content -->
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          {%block 'conteudo'%}{%endblock%}
+        </div>
+      </div>
+    </div>
+    <!-- Bootstrap core JavaScript -->
+    <!-- retirei o apphome/ -->
+    {%include 'partial/partial_footer.html'%}
+  </body>
+</html>
